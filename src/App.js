@@ -4,15 +4,23 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-       
+    <div className="App container">
+      <div className="first d-flex justify-content-around">
+        <div className = "info ">
+        <h2>Large Modal</h2>
+        <button type="button" className=" btn btn-info btn-lg">Open Large Modal</button>
+        </div>
+        <div className = "info ">
+        <h2>Large Modal</h2>
+        <button type="button" class="btn btn-info btn-lg">Open Large Modal</button>
+        </div>
+        <div className = "info">
+        <h2>Large Modal</h2>
+        <button type="button" class="btn btn-info btn-lg">Open Large Modal</button>
+        </div>
+      
+      </div>
         
-      </header>
     </div>
   );
 }
