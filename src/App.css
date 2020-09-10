@@ -14,12 +14,32 @@
     width:80%;
   }
 } */
+.btn-num {
+  padding:7px 30px;
+}
+.comment{
+  margin: 20px 0px 0px 0px;
+}
 .second{
   border : 2px solid lightgray;
+  margin: 40px 0px;
+  background-color: whitesmoke;
+}
+.lable{
+  border-radius: 0px;
+   text-align: start;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p{
+  color : white; 
+  padding:10px 30px;
+  text-align: start;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.input-lower {
-  background-color : whitesmoke;
+
+.input-field {
+  background-color :white;
 }
 .btn{
   margin-top: 20px;
