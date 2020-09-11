@@ -77,12 +77,12 @@ function App() {
               updatecount()
           }
 
-          else if(count+1  === trial && number !== random){
+          else if(count+1  == trial && number !== random){
               settext(`You Lost!!! Try again`)
               setfail(true)
           }
   
-          else if(number === random  && count  !== trial){
+          else if(number == random  && count  !== trial){
            settext(`YOU WON with ${count + 1} trial !!`)
            setcompletion(true)
            updatecount()
@@ -135,7 +135,7 @@ function App() {
         </div>
         <div className = "info">
         <h3>RANGE</h3>
-  <button type="button" class="btn btn-info btn-num">{Max}</button>
+  <button type="button" class="btn btn-info btn-num">1 - {Max}</button>
         </div>
       
       </div>
@@ -164,7 +164,7 @@ function App() {
           </div>
           <div className="comment">
           <div className="form-group">
-          <p className=" bg-info">{guessarray.map((i,index)=><span key={index}> {i }</span>)}</p> 
+          <p className=" bg-info arr">{guessarray.map((i,index)=><span key={index}> {i }</span>)}</p> 
   
             </div>
                    <div className="form-group">
