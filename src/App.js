@@ -90,7 +90,7 @@ useEffect(()=>{
            updatecount()
           }
          
-          else if(number === random  && count  !== trial ){
+          else if(parseInt(number) === parseInt(random)  &&  count  !== trial ){
            settext(`YOU WON with ${count + 1} trial !!`)
            setcompletion(true)
            updatecount()
