@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import './App.css';
 
 function App() {
-  const [number , setnumber] = useState("");
+  const [number , setnumber] = useState();
   const [text , settext] = useState(" ");
   const [guessarray , setguessarray] = useState(["GUESSED : ",]);
   const [random , setRandom] = useState(Math.floor(Math.random()*100));
@@ -82,7 +82,7 @@ function App() {
               setfail(true)
           }
   
-          else if(number == random  && count  !== trial){
+          else if(number === random  && count  !== trial){
            settext(`YOU WON with ${count + 1} trial !!`)
            setcompletion(true)
            updatecount()
