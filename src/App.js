@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import './App.css';
 
 function App() {
@@ -13,10 +13,12 @@ function App() {
   const [count , setcount] = useState(0);
   const [fail , setfail] = useState(false);
   
- 
+useEffect(()=>{
+  console.log(random)
+})
 
   const restart =()=>{
-          setguessarray([])
+          setguessarray(["GUESSED : ",]) 
           setRandom(Math.floor(Math.random()*100))
           setcompletion(false)
           settext("")
@@ -77,12 +79,18 @@ function App() {
               updatecount()
           }
 
-          else if(count+1  == trial && number !== random){
+          else if(count+1  === trial && number !== random){
               settext(`You Lost!!! Try again`)
               setfail(true)
           }
   
-          else if(number == random  && count  !== trial){
+          else if(number === random  && count  !== trial){
+           settext(`YOU WON with ${count + 1} trial !!`)
+           setcompletion(true)
+           updatecount()
+          }
+         
+          else if(number === random  && count  !== trial && count ){
            settext(`YOU WON with ${count + 1} trial !!`)
            setcompletion(true)
            updatecount()
@@ -149,7 +157,7 @@ function App() {
                <fieldset>
                    <div className="form-group">
                        <p className="bg-info lable" htmlFor="guessnumber"> LET'S PLAY</p>
-                       <input value={number} class="form-control form-control-lg" onChange={Change} type="text" name="number" placeholder="Input a number" />
+                       <input value={number} class="form-control form-control-lg" onChange={Change} type="number" name="number" placeholder="Input a number" />
                    </div>
                      
                </fieldset>
